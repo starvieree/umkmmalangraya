@@ -111,8 +111,7 @@
                 <h1>Katalog Lengkap UMKM Malang Raya</h1>
                 <p class="lead" style="margin-bottom:24px">Temukan unit usaha terdekat dari lokasimu dan hubungi
                     penjualnya langsung.</p>
-                <form class="bar"
-                    onsubmit="event.preventDefault();location.href='katalog.html?q='+encodeURIComponent(this.q.value)+'&w='+this.w.value+'&k='+this.k.value">
+                <form class="bar">
                     <input name="q" value="" placeholder="Cari toko atau produk" aria-label="Cari"><select name="k"
                         aria-label="Kategori">
                         <option value="">Semua Kategori</option>
@@ -123,15 +122,15 @@
                         <option value="jasa">Jasa & Servis</option>
                     </select><select name="w" aria-label="Kecamatan">
                         <option value="">Semua Wilayah</option>
-                        <option>Klojen</option>
-                        <option>Lowokwaru</option>
-                        <option>Blimbing</option>
-                        <option>Sukun</option>
-                        <option>Kedungkandang</option>
-                        <option>Batu</option>
-                        <option>Singosari</option>
-                        <option>Kepanjen</option>
-                    </select><button class="btn">Cari</button></form>
+                        <option value="Klojen">Klojen</option>
+                        <option value="Lowokwaru">Lowokwaru</option>
+                        <option value="Blimbing">Blimbing</option>
+                        <option value="Sukun">Sukun</option>
+                        <option value="Kedungkandang">Kedungkandang</option>
+                        <option value="Batu">Batu</option>
+                        <option value="Singosari">Singosari</option>
+                        <option value="Kepanjen">Kepanjen</option>
+                    </select></form>
                 <div class="grid">
                     <article class="card" data-k="kuliner" data-w="Klojen"
                         data-t="bakso arema klojenbakso urat dan bakso urap racikan keluarga sejak 1992. kuah gurih, tanpa pengawet, cocok untuk makan di tempat maupun dibawa pulang.bakso urat spesial,bakso urap komplit,paket bakso frozen">
@@ -273,7 +272,7 @@
                 <a href="kategori.html">Kategori</a>
             </div>
             <div>
-                <h4>-</h4>
+                <h4>&nbsp;</h4>
                 <a href="katalog.html">Katalog UMKM</a>
                 <a href="blog.html">Blog</a>
                 <a href="gabung.html">Daftarkan Usaha</a>
