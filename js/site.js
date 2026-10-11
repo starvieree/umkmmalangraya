@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
 var hd=document.getElementById('hd'),bg=document.getElementById('bg');
 bg.onclick=function(){var o=hd.classList.toggle('open');this.setAttribute('aria-expanded',o);this.setAttribute('aria-label',o?'Tutup menu':'Buka menu')};
 var h=new Date().getHours();
@@ -9,3 +9,11 @@ f.q.value=q;f.k.value=k;f.w.value=w;var n=0;
 document.querySelectorAll('.grid .card[data-k]').forEach(function(c){var ok=(!k||c.dataset.k===k)&&(!w||c.dataset.w===w)&&(!q||c.dataset.t.indexOf(q.toLowerCase())>-1);c.hidden=!ok;if(ok)n++});
 document.getElementById('empty').hidden=n>0}
 })();
+
+window.addEventListener("scroll", () => {
+  const topBtn = document.querySelector(".top");
+  if (topBtn) {
+    if (window.scrollY > 300) topBtn.classList.add("show");
+    else topBtn.classList.remove("show");
+  }
+});
