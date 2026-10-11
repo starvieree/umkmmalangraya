@@ -42,10 +42,34 @@ function filterCards(q, k, w) {
 
 var f=document.querySelector('form.bar');
 if(f){
+    // Baca state filter dari sessionStorage jika ada
+    var initK = sessionStorage.getItem('filter_k') || '';
+    var initW = sessionStorage.getItem('filter_w') || '';
+    var initQ = sessionStorage.getItem('filter_q') || '';
+    sessionStorage.removeItem('filter_k');
+    sessionStorage.removeItem('filter_w');
+    sessionStorage.removeItem('filter_q');
+
+    if(initK) f.k.value = initK;
+    if(initW) f.w.value = initW;
+    if(initQ) f.q.value = initQ;
+
+    filterCards(f.q.value, f.k.value, f.w.value);
+
     f.addEventListener('input', function(){
         filterCards(f.q.value, f.k.value, f.w.value);
     });
 }
+
+// Tangkap klik pada link yang membawa filter khusus
+document.addEventListener('click', function(e){
+    var el = e.target.closest('[data-filter-w], [data-filter-k], [data-filter-q]');
+    if(el){
+        if(el.dataset.filterW) sessionStorage.setItem('filter_w', el.dataset.filterW);
+        if(el.dataset.filterK) sessionStorage.setItem('filter_k', el.dataset.filterK);
+        if(el.dataset.filterQ) sessionStorage.setItem('filter_q', el.dataset.filterQ);
+    }
+});
 })();
 
 window.addEventListener("scroll", () => {
