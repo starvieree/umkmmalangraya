@@ -13,15 +13,7 @@ def compress_and_convert(image_path, output_path, max_size_kb=75):
 
 img_dir = "img"
 images = [
-    "hero-bakso-malang.jpg", "hero-keripik-tempe-sanan.jpg", "hero-batik-malangan.jpg",
-    "kategori-kuliner.jpg", "kategori-kriya.jpg", "kategori-fashion.jpg",
-    "kategori-kebun.jpg", "kategori-jasa.jpg", "produk-bakso-arema-klojen.jpg",
-    "produk-keripik-tempe-bu-siti.jpg", "produk-keramik-dinoyo-sari.jpg",
-    "produk-batik-malangan-ratri.jpg", "blog-menyusuri-sanan-kampung-keripik-tempe.jpg",
-    "blog-bazar-umkm-akhir-pekan-di-batu.jpg", "blog-tips-foto-produk-pakai-hp.jpg",
-    "tentang-lapak-umkm-bazar.jpg", "produk-apel-batu-pak-darmo.jpg",
-    "produk-susu-murni-pujon.jpg", "produk-servis-kulkas-blimbing.jpg",
-    "produk-kopi-dampit-kedung.jpg", "blog-kopi-robusta-dampit-di-cangkir-lokal.jpg"
+    "logo.jpg"
 ]
 
 for img_name in images:
